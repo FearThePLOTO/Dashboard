@@ -1,2 +1,4 @@
-# Dashboard
-A simple Dashboard built to practice Flexbox and Grids made for The Oden Project.
+# WebWidow
+A web scanner dashboard, done for The Odin Project's dashboard project.
+CSS Grid builds the page shell and card grid, Flexbox handles the rows inside.
+Live: https://feartheploto.github.io/Dashboard/
