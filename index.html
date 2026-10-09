@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WebWidow: Scanner Parlor</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Limelight&family=Josefin+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="icon" href="assets/WidowIcon.webp" type="image/webp">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="scrim" id="scrim" hidden></div>
+	<div class="layout" id="top">
+		<aside class="sidebar" id="sidebar">
+			<div class="brand">
+				<span class="plate">
+					<img class="logo" src="assets/WidowIcon.webp" alt="WebWidow mark" width="64" height="64">
+				</span>
+				<p class="brand-name">WebWidow</p>
+			</div>
+			<div class="divider"><i></i></div>
+			<nav class="nav">
+				<a class="active" href="#top">Dashboard</a>
+				<a>Scans</a>
+				<a>Ledger</a>
+				<a>Robots</a>
+				<a>Engine</a>
+				<a href="https://www.theodinproject.com" target="_blank" rel="noopener">Odin Docs</a>
+			</nav>
+			<div class="engine" id="engine">
+				<p class="eyebrow brass-light">Engine</p>
+				<strong>Header reader</strong>
+				<p>Crawl scheduling is not wired.</p>
+			</div>
+		</aside>
+		<header class="header">
+			<div class="header-top">
+				<button class="icon-btn drawer-btn" id="drawerBtn" type="button" aria-label="Open navigation" aria-expanded="false">
+					<img src="assets/menu.svg" alt="">
+				</button>
+				<label class="search">
+					<img src="assets/search.svg" alt="">
+					<input id="search" type="search" placeholder="Filter targets by domain" aria-label="Filter targets by domain">
+				</label>
+				<div class="user-info">
+					<label class="switch">
+					<input id="themeToggle" type="checkbox" aria-label="Dark theme">
+					<span class="track">
+						<img class="day" src="assets/sun.svg" alt="">
+						<img class="night" src="assets/moon.svg" alt="">
+						<span class="knob"></span>
+					</span>
+				</label>
+					<span class="avatar" aria-hidden="true">P</span>
+					<span class="user-name">ploto</span>
+				</div>
+			</div>
+			<div class="divider"><i></i></div>
+			<div class="greeting">
+				<p class="eyebrow">Scanner Parlor</p>
+				<h1>ploto</h1>
+				<a class="mono handle" href="https://github.com/FearThePLOTO" target="_blank" rel="noopener">@FearThePLOTO</a>
+			</div>
+			<div class="actions">
+				<button class="btn primary" id="exportBtn" type="button">Export ledger</button>
+			</div>
+		</header>
+		<main class="main">
+			<section class="scans" id="scans">
+				<p class="eyebrow">Registry I &ndash; VI</p>
+				<h2 id="scansTitle">Scans</h2>
+				<div class="cards" id="cards">
+					<article class="card" data-domain="wikipedia.org">
+						<p class="numeral" aria-hidden="true">I</p>
+						<div class="card-head">
+							<h3><a href="https://wikipedia.org" target="_blank" rel="noopener">wikipedia.org</a></h3>
+							<span class="chip clean">preload</span>
+						</div>
+						<dl class="rows">
+							<div><dt>Status</dt><dd>301</dd></div>
+							<div><dt>Server</dt><dd>mw-web.eqiad.main</dd></div>
+							<div><dt>Type</dt><dd>text/html; charset=iso-8859-1</dd></div>
+							<div><dt>HSTS</dt><dd>max-age=106384710; preload</dd></div>
+						</dl>
+						<div class="card-foot">
+							<span class="state">read 2026-10-09</span>
+							<div class="card-actions">
+								<button class="mini" type="button" aria-pressed="false">watch</button>
+								<a class="mini" href="https://wikipedia.org" target="_blank" rel="noopener">open</a>
+								<button class="mini" type="button" data-share="https://wikipedia.org">copy</button>
+							</div>
+						</div>
+					</article>
+					<article class="card" data-domain="github.com">
+						<p class="numeral" aria-hidden="true">II</p>
+						<div class="card-head">
+							<h3><a href="https://github.com" target="_blank" rel="noopener">github.com</a></h3>
+							<span class="chip clean">preload</span>
+						</div>
+						<dl class="rows">
+							<div><dt>Status</dt><dd>200</dd></div>
+							<div><dt>Server</dt><dd>github.com</dd></div>
+							<div><dt>Type</dt><dd>text/html; charset=utf-8</dd></div>
+							<div><dt>HSTS</dt><dd>max-age=31536000; preload</dd></div>
+						</dl>
+						<div class="card-foot">
+							<span class="state">read 2026-10-09</span>
+							<div class="card-actions">
+								<button class="mini" type="button" aria-pressed="false">watch</button>
+								<a class="mini" href="https://github.com" target="_blank" rel="noopener">open</a>
+								<button class="mini" type="button" data-share="https://github.com">copy</button>
+							</div>
+						</div>
+					</article>
+					<article class="card" data-domain="theodinproject.com">
+						<p class="numeral" aria-hidden="true">III</p>
+						<div class="card-head">
+							<h3><a href="https://www.theodinproject.com" target="_blank" rel="noopener">theodinproject.com</a></h3>
+							<span class="chip">no preload</span>
+						</div>
+						<dl class="rows">
+							<div><dt>Status</dt><dd>200</dd></div>
+							<div><dt>Server</dt><dd>cloudflare</dd></div>
+							<div><dt>Type</dt><dd>text/html; charset=utf-8</dd></div>
+							<div><dt>HSTS</dt><dd>max-age=63072000; includeSubDomains</dd></div>
+						</dl>
+						<div class="card-foot">
+							<span class="state">read 2026-10-09</span>
+							<div class="card-actions">
+								<button class="mini" type="button" aria-pressed="false">watch</button>
+								<a class="mini" href="https://www.theodinproject.com" target="_blank" rel="noopener">open</a>
+								<button class="mini" type="button" data-share="https://www.theodinproject.com">copy</button>
+							</div>
+						</div>
+					</article>
+					<article class="card" data-domain="mozilla.org">
+						<p class="numeral" aria-hidden="true">IV</p>
+						<div class="card-head">
+							<h3><a href="https://www.mozilla.org" target="_blank" rel="noopener">mozilla.org</a></h3>
+							<span class="chip">no preload</span>
+						</div>
+						<dl class="rows">
+							<div><dt>Status</dt><dd>200</dd></div>
+							<div><dt>Server</dt><dd>granian</dd></div>
+							<div><dt>Type</dt><dd>text/html; charset=utf-8</dd></div>
+							<div><dt>HSTS</dt><dd>max-age=31536000</dd></div>
+						</dl>
+						<div class="card-foot">
+							<span class="state">read 2026-10-09</span>
+							<div class="card-actions">
+								<button class="mini" type="button" aria-pressed="false">watch</button>
+								<a class="mini" href="https://www.mozilla.org" target="_blank" rel="noopener">open</a>
+								<button class="mini" type="button" data-share="https://www.mozilla.org">copy</button>
+							</div>
+						</div>
+					</article>
+					<article class="card" data-domain="developer.mozilla.org">
+						<p class="numeral" aria-hidden="true">V</p>
+						<div class="card-head">
+							<h3><a href="https://developer.mozilla.org" target="_blank" rel="noopener">developer.mozilla.org</a></h3>
+							<span class="chip risk">no hsts</span>
+						</div>
+						<dl class="rows">
+							<div><dt>Status</dt><dd>302 &rarr; /en-US/</dd></div>
+							<div><dt>Server</dt><dd>Google Frontend</dd></div>
+							<div><dt>Type</dt><dd>text/plain; charset=utf-8</dd></div>
+							<div><dt>HSTS</dt><dd>absent</dd></div>
+						</dl>
+						<div class="card-foot">
+							<span class="state">read 2026-10-09</span>
+							<div class="card-actions">
+								<button class="mini" type="button" aria-pressed="false">watch</button>
+								<a class="mini" href="https://developer.mozilla.org" target="_blank" rel="noopener">open</a>
+								<button class="mini" type="button" data-share="https://developer.mozilla.org">copy</button>
+							</div>
+						</div>
+					</article>
+					<article class="card" data-domain="httpbin.org">
+						<p class="numeral" aria-hidden="true">VI</p>
+						<div class="card-head">
+							<h3><a href="https://httpbin.org" target="_blank" rel="noopener">httpbin.org</a></h3>
+							<span class="chip risk">no hsts</span>
+						</div>
+						<dl class="rows">
+							<div><dt>Status</dt><dd>200</dd></div>
+							<div><dt>Server</dt><dd>gunicorn/19.9.0</dd></div>
+							<div><dt>Type</dt><dd>text/html; charset=utf-8</dd></div>
+							<div><dt>HSTS</dt><dd>absent</dd></div>
+						</dl>
+						<div class="card-foot">
+							<span class="state">read 2026-10-09</span>
+							<div class="card-actions">
+								<button class="mini" type="button" aria-pressed="false">watch</button>
+								<a class="mini" href="https://httpbin.org" target="_blank" rel="noopener">open</a>
+								<button class="mini" type="button" data-share="https://httpbin.org">copy</button>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="empty" id="empty" hidden>
+					<img class="web" src="assets/web.svg" alt="">
+					<p>No targets match this filter. Clear the search to see all six.</p>
+				</div>
+			</section>
+			<div class="side-col">
+				<section class="panel" id="ledger">
+					<p class="eyebrow">Response ledger</p>
+					<h2 id="ledgerTitle">Ledger</h2>
+					<table class="ledger">
+						<thead>
+							<tr><th scope="col">Target</th><th scope="col">Code</th><th scope="col">HSTS</th></tr>
+						</thead>
+						<tbody>
+							<tr><th scope="row" class="mono">wikipedia.org</th><td>301</td><td><span class="chip clean">preload</span></td></tr>
+							<tr><th scope="row" class="mono">github.com</th><td>200</td><td><span class="chip clean">preload</span></td></tr>
+							<tr><th scope="row" class="mono">theodinproject.com</th><td>200</td><td><span class="chip">no preload</span></td></tr>
+							<tr><th scope="row" class="mono">mozilla.org</th><td>200</td><td><span class="chip">no preload</span></td></tr>
+							<tr><th scope="row" class="mono">developer.mozilla.org</th><td>302</td><td><span class="chip risk">none</span></td></tr>
+							<tr><th scope="row" class="mono">httpbin.org</th><td>200</td><td><span class="chip risk">none</span></td></tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="panel" id="robots">
+					<p class="eyebrow">Crawl directives</p>
+					<h2 id="robotsTitle">Robots</h2>
+					<div class="rows">
+						<div><dt>Disallow /</dt><dd>github.com</dd></div>
+						<div><dt>Sitemap</dt><dd>theodinproject.com</dd></div>
+						<div><dt>Sitemap</dt><dd>developer.mozilla.org</dd></div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
